@@ -12,15 +12,22 @@ Also I need to make a practical work to apply some feature such as paying, chat 
 
 - [ ] Authentication
 - [ ] Inventory Management
-- [ ] Orders
-- [ ] Prescription Upload & Approval
-- [ ] User roles and permission (Admin, Pharmacist, Customer)
+- [ ] Orders Management
+- [ ] Prescription
+- [ ] User roles and permission
 
 ## Future Features
 
 - [ ] Admin Dashboard
-- [ ] Search Filters
-- [ ] Payment
+- [ ] Search & Filters
+- [ ] Payment Integration
 - [ ] Approve & Manage Prescription
-- [ ] Search Medicine
 - [ ] Email Notification
+- [ ] Invoice Generator
+- [ ] Multi-Store Support
+- [ ] Doctor Module
+  - Doctors upload prescriptions for patients
+  - Can search & suggest medicines
+- [ ] Chat Support
+  - Patients can chat with pharmacist (Socket.io)
+
