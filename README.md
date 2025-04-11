@@ -1,6 +1,6 @@
 # Pharmacy Management System
 
-Pharmacy Management System is a web application using React in frontend and nodejs in backend.
+Pharmacy Management System is a web application using React in frontend and Nodejs in backend.
 
 ## Introduction
 
@@ -10,7 +10,7 @@ Also I need to make a practical work to apply some feature such as paying, chat 
 
 ## Features
 
-- [ ] Authentication (Sign Up/Sign In)
+- [ ] Authentication
 - [ ] Inventory Management
 - [ ] Orders
 - [ ] Prescription Upload & Approval
@@ -19,7 +19,8 @@ Also I need to make a practical work to apply some feature such as paying, chat 
 ## Future Features
 
 - [ ] Admin Dashboard
+- [ ] Search Filters
 - [ ] Payment
-- [ ] Approve & Manage
+- [ ] Approve & Manage Prescription
 - [ ] Search Medicine
 - [ ] Email Notification
