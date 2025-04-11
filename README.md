@@ -26,8 +26,7 @@ Also I need to make a practical work to apply some feature such as paying, chat 
 - [ ] Invoice Generator
 - [ ] Multi-Store Support
 - [ ] Doctor Module
-  - Doctors upload prescriptions for patients
-  - Can search & suggest medicines
+  - [ ] Doctors upload prescriptions for patients
+  - [ ] Can search & suggest medicines
 - [ ] Chat Support
-  - Patients can chat with pharmacist (Socket.io)
-
+  - [ ] Patients can chat with pharmacist
