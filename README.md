@@ -1,109 +1,173 @@
-# Pharmacy Management System
+# 💊 Pharmacy Management System
 
-A simple online system for local pharmacies to manage medicines
+A simple online system for local pharmacies to manage medicines, prescriptions, inventory, and orders efficiently.
 
-## Task 1
+---
 
-* Purpose or intro for pharmacy app
-* System Design
-* Overview description with features and business case
-* Tech Stack
+## 📌 Introduction
 
-### Introduction
+Pharmacy Management System is a full-stack web application that enables pharmacies to manage:
 
-Pharmacy management System is an web app for management of medicines and display inventory status exists or sold out (need to update). It also manages orders and pharmacists selling and approve or reject prescriptions.
+- Inventory of medicines
+- User roles and authentication
+- Prescription uploads and approvals
+- Order placement and tracking
 
-### #1 User Flow Diagram
+It supports both administrators and pharmacists in managing pharmacy workflows and assists patients in ordering medicines with or without prescriptions.
+
+---
+
+## 🛠 Tech Stack
+
+| Layer      | Technology               |
+|------------|--------------------------|
+| Backend    | Node.js, Express         |
+| Database   | MySQL                    |
+| Frontend   | React or Next.js         |
+| Auth       | JWT + Role-Based Access  |
+
+---
+
+## 🧠 System Overview
+
+### 🗂️ Features
+
+- User Registration and Role-Based Access (Admin, Pharmacist, Patient, Doctor)
+- Medicine Inventory Management
+- Upload & Approve Prescriptions
+- Order Medicines with Cart System
+- Track Order History
+- Admin Controls
+
+### 🧩 Core Modules
+
+- [ ] ✅ User Management
+- [ ] ✅ Authentication
+- [ ] ✅ Inventory Management
+- [ ] ✅ Prescription Handling
+- [ ] ✅ Order Management
+
+---
+
+## 🔄 User Flow Diagram
 
 ![Pharmacy Flow Diagram](./imgs/pharmacy_flow_diagram.png)
 
-### #2 Core Modules/Functions
+---
 
-* [ ] User Management
-* [ ] Authentication
-* [ ] Inventory Management
-* [ ] Prescription
-* [ ] Orders Management
+## 📋 Task Breakdown
 
-#### Tech Stack
+### Task 1: System Design & Setup
 
-* Backend: Nodejs + Express
-* Database: MySQL
-* FrontEnd: React or Next.js
-* Auth: JWT + Role-based Access
+- [ ] Purpose, Design, and Feature Overview
+- [ ] Create ER Diagram and Plan DB Schema
+- [ ] Setup project structure for frontend & backend
+- [ ] Initialize `package.json` and install dependencies
 
-## Task 2
+---
 
-1. Each main task should be described with points
-2. steps for implement these tasks
+### Task 2: Feature Development
 
-### User Management
+---
 
-* [ ] Users' Roles and Permissions (Admins, Pharmacists, Patients, Doctors) <br>
-* [ ] Role hierarchy with permissions <br>
+### 🔐 Authentication
 
-#### Steps
+- [ ] JWT-based login & registration
+- [ ] Role-based access control
 
-Step 1: Design a ER Model/Diagram
+**Steps:**
 
-- users(id, name, email, password, role)
-- medicines(id, name, category, price, stock, expiry_date)
-- orders(id, user_id, status, total_price, created_at)
-- order_items(id, order_id, medicine_id, quantity, price)
-- prescriptions(id, user_id, file_path, status, uploaded_at)
+1. Create registration & login forms (React)
+2. Create `/register` and `/login` API routes (Node.js)
+3. Hash passwords using bcrypt and issue JWT tokens
+4. Store user info in MySQL `users` table
+5. Enforce role-based route access
 
-Step 2: Create initial relational DB Tables <br>
-Step 3: Create Backend folders and files structure <br>
-Step 4: Create package.json file using "npm init --y" <br>
-Step 5: fill tables with metadata
+---
 
-### Authentication
+### 👥 User Management
 
-* [ ] JWT (LogIn/SignUp)
+- [ ] Handle different roles: Admin, Pharmacist, Patient, Doctor
+- [ ] Define role hierarchy and permissions
 
-Step 1: Create registration & login forms (REACT)
-Step 2: Create `/register` and `/login` API routes (Nodejs)
-Step 3: Hash passwords (e.g. bcrypt use JWT for auth)
-Step 4: Store users in MySQL (users table)
-Step 5: Add role management (admin, pharmacist, patient)
+## 🗄️ Database Schema (MySQL)
 
-### Medicine Inventory Module
+```sql
+users(id, name, email, password, role)
+medicines(id, name, category, price, stock, expiry_date)
+orders(id, user_id, status, total_price, created_at)
+order_items(id, order_id, medicine_id, quantity, price)
+prescriptions(id, user_id, file_path, status, uploaded_at)
+```
 
-* [ ] CRUD Operations
+---
 
-Step 1: Backend API for CRUD on Medicines
-Step 2: Admin UI add/update/delete/create
-Step 3: Patient UI to browse medicines
+## ✅ Setup Steps
 
-* Automatically subtracts sold medicines
+1. Design Entity Relationship (ER) Diagram
+2. Create MySQL tables from the schema
+3. Create backend folder structure (Node.js + Express)
+4. Initialize project using `npm init -y`
+5. Seed database with sample data
 
-* Adds new stock when deliveries arrive
+---
 
-* Shows warnings when stock is low
+## 💊 Medicine Inventory Module
 
-### Prescription Upload Module
+### Features
 
-* [ ] patient uploads prescription
+- Admin: Add, Edit, Delete, and View Medicines (CRUD)
+- Patient: Browse available medicines
+- Automatically subtract stock when an order is placed
+- Restock when new deliveries arrive
+- Alert on low stock levels
 
-Step 1: Allow uploading prescription (pdf/image)
-Step 2: Admin approval workflow
+### Implementation Steps
 
+1. Backend APIs for CRUD operations (Node.js + Express)
+2. Admin UI for inventory control (React/Next.js)
+3. Patient UI to browse medicines (React/Next.js)
 
-* [ ] Pharmacist/Admin can approve or reject
+---
 
-### Cart & Order Module
+## 📄 Prescription Upload Module
 
-* [ ] Add to Cart
-* [ ] Checkout
+### Features
 
-## #3 Future Features
+- Patients can upload prescriptions (PDF or Image)
+- Pharmacists/Admins can approve or reject them
 
-* [ ] Admin Dashboard
-* [ ] Search & Filters
-* [ ] Payment Integration
-* [ ] Approve & Manage Prescription
-* [ ] Email Notification
-* [ ] Invoice Generator
-* [ ] Multi-Store Support
-* [ ] Doctor Module
-* [ ] Chat Support
+### Implementation Steps
+
+1. Setup file upload using **Multer** (Node.js)
+2. Store file path and metadata in the `prescriptions` table
+3. Admin/Pharmacist UI to view and approve/reject files
+
+---
+
+## 🛒 Cart & Order Module
+
+### Features
+
+- Patients can add medicines to cart
+- Checkout process to place orders
+- View order history and track statuses
+
+### Implementation Steps
+
+1. Implement cart system (Frontend state management + backend persistence)
+2. Checkout API to insert into `orders` and `order_items` tables
+3. Display past orders in the patient dashboard
+
+---
+
+## 🔮 Future Features (Extended)
+
+- [ ] Admin Dashboard for full system analytics
+- [ ] Advanced search & filtering on medicines
+- [ ] Payment integration (Stripe/PayPal)
+- [ ] Invoice generator on order confirmation
+- [ ] Multi-store management for chain pharmacies
+- [ ] Doctor module for digital prescription issuance
+- [ ] Email notifications for orders and approvals
+- [ ] Real-time chat support for patient queries
