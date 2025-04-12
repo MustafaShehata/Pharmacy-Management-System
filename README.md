@@ -1,65 +1,88 @@
 # Pharmacy Management System
 
-Pharmacy Management System is a web application using React in frontend and Nodejs in backend.
+A simple online system for local pharmacies to manage medicines
 
-## #1 Introduction
+## Task 1
 
-The purpose of this web app is to improve my skills in React and Nodejs.
+* Purpose or intro for pharmacy app
+* System Design
+* Overview description with features and business case
+* Tech Stack
 
-Also I need to make a practical work to apply some feature such as paying, chat with pharmacist, and admin dashboard with charts.
+### Introduction
 
-## #2 Core Modules/Functions
+Pharmacy management System is an web app for management of medicines and display inventory status exists or sold out (need to update). It also manages orders and pharmacists selling and approve or reject prescriptions.
 
-- [ ] User Management
-- [ ] Authentication
-- [ ] Inventory Management
-- [ ] Prescription
-- [ ] Orders Management
+### #1 User Flow Diagram
 
-### #2.1 User Management
-
-- [ ] Users' Roles and Permissions (Admin, Pharmacist, Customer)
-
-### #2.2 Authentication
-
-- [ ] JWT (logIn/signUp)
-
-### #2.3 Medicine Inventory Module
-
-- [ ] CRUD Operations
-
-### #2.4 Prescription Upload Module
-
-- [ ] Customer uploads prescription
-- [ ] Pharmacist/Admin can approve or reject
-
-### #2.5 Cart & Order Module
-
-- [ ] Add to Cart
-- [ ] Checkout
-
-## #3 Tech Stack
-
-Backend: Nodejs + Express
-Database: MySQL
-FrontEnd: React or Next.js
-Auth: JWT + Role-based Access
-
-## #4 User Flow Diagram
+![Pharmacy Flow Diagram](./imgs/pharmacy_flow_diagram.png)
 
 
+### #2 Core Modules/Functions
 
+* [ ] User Management
+* [ ] Authentication
+* [ ] Inventory Management
+* [ ] Prescription
+* [ ] Orders Management
 
-## #5 Future Features
+#### Tech Stack
 
-- [ ] Admin Dashboard
-- [ ] Search & Filters
-- [ ] Payment Integration
-- [ ] Approve & Manage Prescription
-- [ ] Email Notification
-- [ ] Invoice Generator
-- [ ] Multi-Store Support
-- [ ] Doctor Module
-  - [ ] Doctors upload prescriptions for patients
-- [ ] Chat Support
-  - [ ] Patients can chat with pharmacist
+* Backend: Nodejs + Express
+* Database: MySQL
+* FrontEnd: React or Next.js
+* Auth: JWT + Role-based Access
+
+## Task 2
+
+1. Each main task should be described with points
+2. steps for implement these tasks
+
+### User Management
+
+* [ ] Users' Roles and Permissions (Admins, Pharmacists, Patients, Doctors) <br>
+* [ ] Role hierarchy with permissions <br>
+
+#### Steps
+
+step 1: Design a ER Model/Diagram for all app <br>
+step 2: Create relational DB Tables <br>
+step 3: Create Backend folders and files structure <br>
+step 4: Create package.json file using "npm init --y" <br>
+step 5: fill tables with metadata
+
+### Authentication
+
+* [ ] JWT (LogIn/SignUp)
+
+### Medicine Inventory Module
+
+* [ ] CRUD Operations
+
+* Automatically subtracts sold medicines
+
+* Adds new stock when deliveries arrive
+
+* Shows warnings when stock is low
+
+### Prescription Upload Module
+
+* [ ] Customer uploads prescription
+* [ ] Pharmacist/Admin can approve or reject
+
+### Cart & Order Module
+
+* [ ] Add to Cart
+* [ ] Checkout
+
+## #3 Future Features
+
+* [ ] Admin Dashboard
+* [ ] Search & Filters
+* [ ] Payment Integration
+* [ ] Approve & Manage Prescription
+* [ ] Email Notification
+* [ ] Invoice Generator
+* [ ] Multi-Store Support
+* [ ] Doctor Module
+* [ ] Chat Support
