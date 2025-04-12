@@ -51,7 +51,7 @@ It supports both administrators and pharmacists in managing pharmacy workflows a
 
 ## 🔄 User Flow Diagram
 
-![Pharmacy Flow Diagram](./imgs/pharmacy_flow_diagram.png)
+![Pharmacy Flow Diagram](./imgs/Final_Pharmacy_Diagram.png)
 
 ---
 
@@ -157,7 +157,6 @@ prescriptions(id, user_id, file_path, status, uploaded_at)
 
 1. Implement cart system (Frontend state management + backend persistence)
 2. Checkout API to insert into `orders` and `order_items` tables
-3. Display past orders in the patient dashboard
 
 ---
 
