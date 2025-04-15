@@ -7,7 +7,7 @@ USE pharmacy_system;
 
 -- Table: address	(DONE)
 CREATE TABLE address (
-	address_id INT PRIMARY KEY AUTO_INCREMENT,
+  address_id INT PRIMARY KEY AUTO_INCREMENT,
   street_no VARCHAR(100),
   city VARCHAR(50),
   state VARCHAR(50)
@@ -15,7 +15,7 @@ CREATE TABLE address (
 
 -- Table: user
 CREATE TABLE user (
-	user_id INT PRIMARY KEY AUTO_INCREMENT,
+  user_id INT PRIMARY KEY AUTO_INCREMENT,
   username VARCHAR(50) UNIQUE NOT NULL,
   first_name VARCHAR(50),
   last_name VARCHAR(50),
@@ -29,10 +29,9 @@ CREATE TABLE user (
 );
 
 -- profile (Admin, pharmacist, Patient)
-
 -- Table: admin_profile
 CREATE TABLE admin_profile (
-	admin_id INT PRIMARY KEY AUTO_INCREMENT,
+  admin_id INT PRIMARY KEY AUTO_INCREMENT,
   user_id INT UNIQUE NOT NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -41,7 +40,7 @@ CREATE TABLE admin_profile (
 
 -- Table: pharmacist_profile
 CREATE TABLE pharmacist_profile (
-	pharmacist_id INT PRIMARY KEY AUTO_INCREMENT,
+  pharmacist_id INT PRIMARY KEY AUTO_INCREMENT,
   user_id INT UNIQUE NOT NULL,
   license_no VARCHAR(50) UNIQUE NOT NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -51,7 +50,7 @@ CREATE TABLE pharmacist_profile (
 
 -- Table: customer_profile
 CREATE TABLE customer_profile (
-	customer_id INT PRIMARY KEY AUTO_INCREMENT,
+  customer_id INT PRIMARY KEY AUTO_INCREMENT,
   user_id INT UNIQUE NOT NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
@@ -60,14 +59,14 @@ CREATE TABLE customer_profile (
 
 -- Table: drug
 CREATE TABLE drug (
-	drug_id INT PRIMARY KEY AUTO_INCREMENT,
+  drug_id INT PRIMARY KEY AUTO_INCREMENT,
   drug_name VARCHAR(100) UNIQUE NOT NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 );
 
 -- Table: inventory
 CREATE TABLE inventory (
-	inventory_id INT PRIMARY KEY AUTO_INCREMENT,
+  inventory_id INT PRIMARY KEY AUTO_INCREMENT,
   drug_id INT NOT NULL,
   quantity INT NOT NULL,
   expiry_date DATE NOT NULL,
@@ -76,7 +75,7 @@ CREATE TABLE inventory (
 
 -- Table: prescription
 CREATE TABLE prescription (
-	prescription_id INT PRIMARY KEY AUTO_INCREMENT,
+  prescription_id INT PRIMARY KEY AUTO_INCREMENT,
   customer_id INT NOT NULL,
   prescribing_doctor VARCHAR(100) NOT NULL,
   doctor_license VARCHAR(50),
@@ -87,7 +86,7 @@ CREATE TABLE prescription (
 
 -- Table: prescription_drug
 CREATE TABLE prescription_drug (
-	prescription_drug_id INT PRIMARY KEY AUTO_INCREMENT,
+  prescription_drug_id INT PRIMARY KEY AUTO_INCREMENT,
   prescription_id INT NOT NULL,
   drug_id INT NOT NULL,
   quantity INT NOT NULL,
@@ -96,12 +95,18 @@ CREATE TABLE prescription_drug (
 );
 
 -- Table: order
-CREATE TABLE  `order` (
-	order_id INT PRIMARY KEY AUTO_INCREMENT,
+CREATE TABLE `order` (
+  order_id INT PRIMARY KEY AUTO_INCREMENT,
   customer_id INT NOT NULL,
   order_date DATETIME DEFAULT CURRENT_TIMESTAMP,
-  total_amount DECIMAL(10,2) NOT NULL,
-  order_status ENUM('pending', 'processing', 'shipped', 'delivered', 'cancelled') DEFAULT 'pending',
+  total_amount DECIMAL(10, 2) NOT NULL,
+  order_status ENUM(
+    'pending',
+    'processing',
+    'shipped',
+    'delivered',
+    'cancelled'
+  ) DEFAULT 'pending',
   pharmacist_id INT,
   FOREIGN KEY (customer_id) REFERENCES Customer_Profile(customer_id),
   FOREIGN KEY (pharmacist_id) REFERENCES pharmacist_profile(pharmacist_id)
@@ -109,7 +114,7 @@ CREATE TABLE  `order` (
 
 -- Table: order_item
 CREATE TABLE order_item (
-	order_item_id INT PRIMARY KEY AUTO_INCREMENT,
+  order_item_id INT PRIMARY KEY AUTO_INCREMENT,
   order_id INT NOT NULL,
   drug_id INT NOT NULL,
   quantity INT NOT NULL,
@@ -122,5 +127,3 @@ CREATE TABLE order_item (
   FOREIGN KEY (inventory_id) REFERENCES inventory(inventory_id),
   FOREIGN KEY (prescription_drug_id) REFERENCES prescription_drug(prescription_drug_id)
 );
-
-
