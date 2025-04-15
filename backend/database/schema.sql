@@ -81,7 +81,7 @@ CREATE TABLE prescription (
   doctor_license VARCHAR(50),
   issue_date DATE NOT NULL,
   expiry_date DATE NOT NULL,
-  FOREIGN KEY (customer_id) REFERENCES cutomer_profile(customer_id)
+  FOREIGN KEY (customer_id) REFERENCES customer_profile(customer_id)
 );
 
 -- Table: prescription_drug
