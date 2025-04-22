@@ -17,6 +17,15 @@ It supports both administrators and pharmacists in managing pharmacy workflows a
 
 ---
 
+## 🔍 Problem Statement
+
+Pharmacy management systems often struggle with inefficient inventory tracking and prescription processing, leading to medication errors and operational delays.
+
+- Manual inventory tracking leads to 15-20% medication waste annually
+- 40% of pharmacies report prescription processing delays >24 hours
+
+---
+
 ## 🛠 Tech Stack
 
 | Layer      | Technology               |
