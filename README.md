@@ -99,15 +99,9 @@ Pharmacy management systems often struggle with inefficient inventory tracking a
 - [ ] Handle different roles: Admin, Pharmacist, Patient, Doctor
 - [ ] Define role hierarchy and permissions
 
-## 🗄️ Database Schema (MySQL)
+## 🗄️ Entity Relationship Diagram (ERD)
 
-```sql
-users(id, name, email, password, role)
-medicines(id, name, category, price, stock, expiry_date)
-orders(id, user_id, status, total_price, created_at)
-order_items(id, order_id, medicine_id, quantity, price)
-prescriptions(id, user_id, file_path, status, uploaded_at)
-```
+![ERD](./imgs/ERD/Pharmacy_ERModel.png)
 
 ---
 
