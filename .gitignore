@@ -11,6 +11,6 @@ node_modules/
 test.rest
 
 # db schema
-/backend/database/database.js
+/backend/database/schema.sql
 
 .env
