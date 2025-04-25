@@ -1,11 +1,6 @@
 SHOW DATABASES;
 
--- Database: pharmacy_management
-CREATE DATABASE pharmacy_system;
-
-USE pharmacy_system;
-
--- Table: address	(DONE)
+-- Table: address
 CREATE TABLE address (
   address_id INT PRIMARY KEY AUTO_INCREMENT,
   street_no VARCHAR(100),

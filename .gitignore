@@ -9,3 +9,8 @@ node_modules/
 
 # test files
 test.rest
+
+# db schema
+/backend/database/database.js
+
+.env

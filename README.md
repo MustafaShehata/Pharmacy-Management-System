@@ -4,7 +4,7 @@ A simple online system for local pharmacies to manage medicines, prescriptions, 
 
 ---
 
-## 📌 Introduction
+## Introduction
 
 Pharmacy Management System is a full-stack web application that enables pharmacies to manage:
 
@@ -17,7 +17,7 @@ It supports both administrators and pharmacists in managing pharmacy workflows a
 
 ---
 
-## 🔍 Problem Statement
+## Problem Statement
 
 Pharmacy management systems often struggle with inefficient inventory tracking and prescription processing, leading to medication errors and operational delays.
 
@@ -26,7 +26,7 @@ Pharmacy management systems often struggle with inefficient inventory tracking a
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 | Layer      | Technology               |
 |------------|--------------------------|
@@ -39,7 +39,7 @@ Pharmacy management systems often struggle with inefficient inventory tracking a
 
 ## 🧠 System Overview
 
-### 🗂️ Features
+### Features
 
 - User Registration and Role-Based Access (Admin, Pharmacist, Patient, Doctor)
 - Medicine Inventory Management
@@ -48,23 +48,23 @@ Pharmacy management systems often struggle with inefficient inventory tracking a
 - Track Order History
 - Admin Controls
 
-### 🧩 Core Modules
+### Core Modules
 
-- [ ] ✅ User Management
-- [ ] ✅ Authentication
-- [ ] ✅ Inventory Management
-- [ ] ✅ Prescription Handling
-- [ ] ✅ Order Management
+- [ ] User Management
+- [ ] Authentication
+- [ ] Inventory Management
+- [ ] Prescription Handling
+- [ ] Order Management
 
 ---
 
-## 🔄 User Flow Diagram
+## User Flow Diagram
 
 ![Pharmacy Flow Diagram](./imgs/Final_Pharmacy_Diagram.png)
 
 ---
 
-## 📋 Task Breakdown
+## Task Breakdown
 
 ### Task 1: System Design & Setup
 
@@ -79,7 +79,7 @@ Pharmacy management systems often struggle with inefficient inventory tracking a
 
 ---
 
-### 🔐 Authentication
+### Authentication
 
 - [ ] JWT-based login & registration
 - [ ] Role-based access control
@@ -94,18 +94,18 @@ Pharmacy management systems often struggle with inefficient inventory tracking a
 
 ---
 
-### 👥 User Management
+### User Management
 
 - [ ] Handle different roles: Admin, Pharmacist, Patient, Doctor
 - [ ] Define role hierarchy and permissions
 
-## 🗄️ Entity Relationship Diagram (ERD)
+## Entity Relationship Diagram (ERD)
 
 ![ERD](./imgs/ERD/Pharmacy_ERModel.png)
 
 ---
 
-## ✅ Setup Steps
+## Setup Steps
 
 1. Design Entity Relationship (ER) Diagram
 2. Create MySQL tables from the schema
@@ -115,7 +115,7 @@ Pharmacy management systems often struggle with inefficient inventory tracking a
 
 ---
 
-## 💊 Medicine Inventory Module
+## Medicine Inventory Module
 
 ### Features
 
@@ -133,7 +133,7 @@ Pharmacy management systems often struggle with inefficient inventory tracking a
 
 ---
 
-## 📄 Prescription Upload Module
+## Prescription Upload Module
 
 ### Features
 
@@ -148,7 +148,7 @@ Pharmacy management systems often struggle with inefficient inventory tracking a
 
 ---
 
-## 🛒 Cart & Order Module
+## Cart & Order Module
 
 ### Features
 
@@ -163,7 +163,7 @@ Pharmacy management systems often struggle with inefficient inventory tracking a
 
 ---
 
-## 🔮 Future Features (Extended)
+## Future Features (Extended)
 
 - [ ] Admin Dashboard for full system analytics
 - [ ] Advanced search & filtering on medicines
