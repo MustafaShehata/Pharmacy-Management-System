@@ -1,6 +1,6 @@
 # 💊 Pharmacy Management System
 
-A simple online system for local pharmacies to manage medicines, prescriptions, inventory, and orders efficiently.
+A simple online system for local pharmacies to manage users-role system, medicines, prescriptions, inventory, and orders efficiently.
 
 ---
 
