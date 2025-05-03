@@ -41,12 +41,11 @@ Pharmacy management systems often struggle with inefficient inventory tracking a
 
 ### Features
 
-- User Registration and Role-Based Access (Admin, Pharmacist, Patient, Doctor)
+- User Registration and Role-Based Access (Admin, Pharmacist, Patient/Customer)
 - Medicine Inventory Management
 - Upload & Approve Prescriptions
 - Order Medicines with Cart System
 - Track Order History
-- Admin Controls
 
 ### Core Modules
 
@@ -101,7 +100,7 @@ Pharmacy management systems often struggle with inefficient inventory tracking a
 
 ## Entity Relationship Diagram (ERD)
 
-![ERD](./imgs/ERD/Pharmacy_ERModel.png)
+![ERD](./imgs/ERD/pharmacy_Last_V1.jpg)
 
 ---
 
