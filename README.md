@@ -164,6 +164,7 @@ Pharmacy management systems often struggle with inefficient inventory tracking a
 
 ## Project Root Structure
 
+```plaintext
 pharmacy-app/
 │
 ├── backend/                # Express + Node + MySQL
@@ -173,9 +174,11 @@ pharmacy-app/
 ├── .env                    # Global shared settings (if any)
 ├── README.md
 └── docker-compose.yml      # (optional: for dev containers)
+```
 
 ## backend Structure
 
+```plaintext
 backend/
 │
 ├── src/
@@ -193,9 +196,11 @@ backend/
 ├── server.js               # Entry point
 ├── .env
 └── package.json
+```
 
 ## frontend Structure
 
+```plaintext
 frontend/
 │
 ├── public/                 # Static files
@@ -213,9 +218,11 @@ frontend/
 ├── tests/                  # Frontend tests (Jest + Testing Library)
 ├── .env
 └── package.json
+```
 
 ## database (MySQL)
 
+```plaintext
 database/
 │
 ├── schemas/                # SQL schema definitions
@@ -224,15 +231,18 @@ database/
 ├── migrations/             # Optional: migration scripts
 ├── seeders/                # Mock data for testing/dev
 └── erd/                    # PNG/SVG/Draw.io of ER diagram
+```
 
 ## docs Directory
 
+```plaintext
 docs/
 │
 ├── system_design.md
 ├── feature_checklists/
 ├── screenshots/
 └── api_docs.md
+```
 
 ---
 
