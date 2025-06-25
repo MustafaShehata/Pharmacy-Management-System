@@ -1,17 +1,35 @@
-# old files
-oldREADME.md
-
-# images
-/imgs/pharmacy_flow_diagram.png
-
-# node_modules
-node_modules/
-
-# test files
-test.rest
-
-# db schema
-/backend/database/schema.sql
-
+# General
+.DS_Store
 .env
+*.log
+*.local
+*.rest
+bruno/
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist/
+coverage/
+
+# React (frontend)
+frontend/build/
+frontend/node_modules/
+
+# Express (backend)
+backend/node_modules/
+backend/uploads/
+backend/.env
+
+# MySQL dump or credentials
+database/*.sql
+database/.env
+
+# Docker
+*.pid
+docker-compose.override.yml
+
+# VSCode
 .vscode/

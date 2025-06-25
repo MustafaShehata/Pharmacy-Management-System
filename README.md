@@ -1,4 +1,4 @@
-# 💊 Pharmacy Management System
+# Pharmacy Management System
 
 A simple online system for local pharmacies to manage users-role system, medicines, prescriptions, inventory, and orders efficiently.
 
@@ -32,12 +32,12 @@ Pharmacy management systems often struggle with inefficient inventory tracking a
 |------------|--------------------------|
 | Backend    | Node.js, Express         |
 | Database   | MySQL                    |
-| Frontend   | React or Next.js         |
+| Frontend   | NOT SPECIFIED            |
 | Auth       | JWT + Role-Based Access  |
 
 ---
 
-## 🧠 System Overview
+## System Overview
 
 ### Features
 
@@ -59,7 +59,7 @@ Pharmacy management systems often struggle with inefficient inventory tracking a
 
 ## User Flow Diagram
 
-![Pharmacy Flow Diagram](./imgs/Final_Pharmacy_Diagram.png)
+![Pharmacy Flow Diagram](./docs/imgs/readme/Final_Pharmacy_Diagram.png)
 
 ---
 
@@ -100,7 +100,7 @@ Pharmacy management systems often struggle with inefficient inventory tracking a
 
 ## Entity Relationship Diagram (ERD)
 
-![ERD](./imgs/ERD/pharmacy_Last_V1.jpg)
+![ERD](./database/erd/pharmacy_erd_white.jpg)
 
 ---
 
@@ -159,6 +159,80 @@ Pharmacy management systems often struggle with inefficient inventory tracking a
 
 1. Implement cart system (Frontend state management + backend persistence)
 2. Checkout API to insert into `orders` and `order_items` tables
+
+---
+
+## Project Root Structure
+
+pharmacy-app/
+│
+├── backend/                # Express + Node + MySQL
+├── frontend/               # React (or Next.js if SSR)
+├── database/               # SQL schema, ERD, migrations
+├── docs/                   # Docs, flowcharts, UI mockups
+├── .env                    # Global shared settings (if any)
+├── README.md
+└── docker-compose.yml      # (optional: for dev containers)
+
+## backend Structure
+
+backend/
+│
+├── src/
+│   ├── config/             # MySQL config, .env loader
+│   ├── controllers/        # Business logic (e.g. userController.js)
+│   ├── middlewares/        # auth, error handling, logging
+│   ├── models/             # SQL logic or ORM (e.g. Sequelize/Knex)
+│   ├── routes/             # Route files grouped by domain
+│   ├── services/           # Logic used by controllers (e.g. token, mail)
+│   ├── utils/              # Common utilities (validators, helpers)
+│   ├── uploads/            # Prescription file storage
+│   └── app.js              # Express app setup
+│
+├── tests/                  # Backend unit/integration tests
+├── server.js               # Entry point
+├── .env
+└── package.json
+
+## frontend Structure
+
+frontend/
+│
+├── public/                 # Static files
+├── src/
+│   ├── assets/             # Icons, images
+│   ├── components/         # Reusable components (Button, Card, etc.)
+│   ├── layouts/            # Page layouts (DashboardLayout, AuthLayout)
+│   ├── pages/              # Route-level pages (Login, Inventory, Orders)
+│   ├── services/           # API requests (Axios-based)
+│   ├── contexts/           # React context (auth, cart, etc.)
+│   ├── hooks/              # Custom hooks
+│   ├── utils/              # Formatters, converters
+│   └── App.jsx
+│
+├── tests/                  # Frontend tests (Jest + Testing Library)
+├── .env
+└── package.json
+
+## database (MySQL)
+
+database/
+│
+├── schemas/                # SQL schema definitions
+│   └── pharmacy_schema.sql
+│
+├── migrations/             # Optional: migration scripts
+├── seeders/                # Mock data for testing/dev
+└── erd/                    # PNG/SVG/Draw.io of ER diagram
+
+## docs Directory
+
+docs/
+│
+├── system_design.md
+├── feature_checklists/
+├── screenshots/
+└── api_docs.md
 
 ---
 
