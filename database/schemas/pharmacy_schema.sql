@@ -62,6 +62,9 @@ ALTER TABLE user
         MODIFY COLUMN created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
 
 
+ALTER TABLE user
+        MODIFY COLUMN role_type ENUM('admin', 'pharmacist', 'customer') NOT NULL DEFAULT 'customer';
+
 DESCRIBE user;
 
 -- profile (Admin, pharmacist, Patient)
