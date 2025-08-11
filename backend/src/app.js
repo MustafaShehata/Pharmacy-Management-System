@@ -19,7 +19,7 @@ const publicDirectory = path.join(__dirname, '../../frontend/public');
 app.use(express.static(publicDirectory));
 
 // Parse URL-encoded bodies (as sent by HTML forms)
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 
 // const viewPath = path.join('../../frontend/views');
 const viewPath = path.join(__dirname, '../../frontend/views');
@@ -33,7 +33,7 @@ app.use('/api', userRoutes);
 // Define Routes
 app.use('/', pages);
 
-app.use('/auth', authRoutes);
+app.use('/api/auth', authRoutes);
 
 // app.get('/', (req, res) => {
 //   // res.send("<h1>Hello Page</h1>");

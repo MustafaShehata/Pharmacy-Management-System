@@ -1,4 +1,4 @@
-# Pharmacy Management System
+# Pharmacy Management System (EcoPharmacy)
 
 A simple online system for local pharmacies to manage users-role system, medicines, prescriptions, inventory, and orders efficiently.
 

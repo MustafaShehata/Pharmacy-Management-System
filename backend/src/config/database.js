@@ -18,10 +18,10 @@ export const pool = mysql.createPool({
 export const checkConnection = async () => {
   try {
     const connection = await pool.getConnection();
-    console.log("MYSQL Connected Successfully...");
+    console.log("DATABASE Connected Successfully");
     connection.release();
   } catch(err) {
-    console.log("Error Connected to MYSQL ️!!!", err);
+    console.log("Error Connected to MYSQL !!!", err);
     throw err;
   }
 }
