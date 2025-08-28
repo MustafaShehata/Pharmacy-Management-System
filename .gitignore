@@ -26,6 +26,7 @@ backend/.env
 # MySQL dump or credentials
 database/*.sql
 database/.env
+database/*
 
 # Docker
 *.pid
