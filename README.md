@@ -1,4 +1,4 @@
-# Pharmacy Management System (EcoPharmacy)
+# Pharmacy Management System
 
 A simple online system for local pharmacies to manage users-role system, medicines, prescriptions, inventory, and orders efficiently.
 
@@ -97,10 +97,6 @@ Pharmacy management systems often struggle with inefficient inventory tracking a
 
 - [ ] Handle different roles: Admin, Pharmacist, Patient, Doctor
 - [ ] Define role hierarchy and permissions
-
-## Entity Relationship Diagram (ERD)
-
-![ERD](./database/erd/pharmacy_erd_white.jpg)
 
 ---
 
